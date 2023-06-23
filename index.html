@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHI FU MI</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="bigContainer">
+
+        <div class="resultMatch">
+            <p>Round : </br><span id="round">0</span></p>
+       
+        
+            <div class="resultComputerAndUser">    
+                <p> Your Victories:</br><span id="victoryUser">0</span></p>
+                <p>Victories Fighter:</br><span id="victoryComputer">0</span></p>
+            </div>
+        </div>    
+            <div class="container">
+   
+                           
+                <div class="box">
+                    <div id="boxBalboa">
+                    <img src="assets/img/rockyBalboa.png" alt="Rocky Balboa" />
+                    </div>
+                    <button id="buttonBalboa" choice="1" class="userChoice">Rocky Balboa</button>
+
+                </div>
+
+                <div class="box">
+                    <div id="boxCreed">
+                    <img src="assets/img/appoloCreed.png" alt="Appolo Creed">
+                    </div>
+                    <button id="buttonCreed" choice="2" class="userChoice">Apollo Creed</button>
+
+                </div>
+
+                <div class="box">
+                    <div id="boxDrago">
+                    <img src="assets/img/IvanDrago.png" alt="Ivan Drago">
+                    </div>
+                    <div>
+                    <button id="buttonDrago" choice="3" class="userChoice">Ivan Drago</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="centeredBtn">
+                <button id="btnClick">FIGHT!</button>
+            </div>
+
+            <div class="answer">
+                <p class="bgWhite">Your choice:</p>
+                <div id="answerUser" class="boxAnswer"></div>
+                <p class="bgWhite">Your fighter:</p>
+                <div id="computerAnswer" class="boxAnswer"></div>
+            </div>
+            <div id="result" class="resulted"></div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
