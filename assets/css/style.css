@@ -192,6 +192,20 @@ img{
     
   }
  
+  .sentenceLost {
+    left:-60%;
+    transform:translateX(2000%);
+ }
+
+ .sentenceWin{
+    left:-150%;
+    transform:translateX(2000%);
+ }
+
+ .sentenceEquality{
+    left:-100%;
+    transform:translateX(2000%);
+ }
      
  
         
@@ -209,12 +223,30 @@ img{
      
          /* Style pour l'image */
          .modal-image {
-             
+             z-index:1;
             background-size:cover;
            /* background-position: bottom; */
            background-repeat:no-repeat;
-         
+         position:relative;
           width:100%;
           height:0;
          transition: height 2s;  
          }    
+
+         .tryAgain{
+            z-index:1;
+            position:absolute;
+            color:white;
+            left: 50%;
+            top: 50%; 
+            transform: translate(-50%, -50%);
+            border: solid 1px black;
+            
+         }
+
+         .tryAgainButtons{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-around;
+         }
+

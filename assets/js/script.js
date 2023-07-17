@@ -51,7 +51,7 @@ let boxbis=document.querySelectorAll('.boxbis');
 
 //  refaire une partie 
 let buttontoDoAgain=document.querySelector('.toDoAgain');
-let buttonDontDoAgain=document.querySelector('.DontDoAgain');
+let buttonDontDoAgain=document.querySelector('.dontDoAgain');
 
 // function playSoundOfAdrian (){
 // soundOfRocky_Adrian.play();
@@ -370,7 +370,7 @@ computerAnswer.innerHTML = ''
     //  newImageTraining.innerHTML=`<div><img src="assets/gif/rockyTraining.gif" alt="image victoire"<p>You Must Train !</p></div> ` ;
     //  result.appendChild(newImageTraining);
      modal.style.visibility = "visible";
-     modalImage.style.backgroundImage="url(assets/img/imagevictory.jpg)";
+     modalImage.style.backgroundImage="url(assets/img/rockytrain.jpg)";
      modalImage.style.height="100vh";
     modalbis.style.top="0px";
     sentence.style.left="-150%";
@@ -393,16 +393,26 @@ buttontoDoAgain.addEventListener('click',()=>{
     numberOfUserVictory=0;
     numberOfComputerVictory=0;
     modalImage.style.height="0vh";
-
-    modal.style.visibility="hidden";
-  
-   
+     modal.style.visibility="hidden";
+     soundOfDefeat.pause();
+     soundOfTraining.pause();
+    soundOfVictory.pause();
+     soundOfDefeat.currentTime=0;
+    soundOfTraining.currentTime=0;
+   soundOfVictory.currentTime=0;
    
    }) 
 
+   buttonDontDoAgain.addEventListener('click',()=>{
+    modal.style.visibility="hidden";
+    soundOfDefeat.pause();
+     soundOfTraining.pause();
+    soundOfVictory.pause();
+    soundOfDefeat.currentTime=0;
+    soundOfTraining.currentTime=0;
+   soundOfVictory.currentTime=0;
   
-
-
+   })
 
 // for (let e of tableau){
    
