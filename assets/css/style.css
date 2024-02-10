@@ -19,22 +19,42 @@ body{
     background-image: url("../img/boxing-ring-gym\(1\).jpg") ;
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
-    
- 
-    
+    background-repeat: no-repeat;    
 } 
+/* 
+.bigContainer{
+    /* border:yellow 2px solid; */
+
 .resultMatch{
     width:20%;
     margin:auto;
     text-align:center;
   font-family:'Silkscreen';
     background-color:aliceblue;
-    font-size:20px;
+    font-size:16px;
+    border:black solid 1px;
+    /* height:19vh; */
+    
+    
 }
+.containerGame{
+    display:flex;
+   justify-content: space-around;
+    align-items:center;
+    
+}
+
+.answerGamer,.answerComputer{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+    align-items:center;
+}
+
 .resultComputerAndUser{
     display:flex;
     flex-direction:row;
+    /* border:blue 1px solid; */
 }
 .resultComputerAndUser p{
     width:50%;
@@ -43,7 +63,7 @@ body{
 span{
     font-family: 'Silkscreen';
     color:red;
-    font-size:50px;
+    font-size:25px;
 }
 .container{
 width:90%;
@@ -53,7 +73,8 @@ display:flex;
 flex-direction:row;
 justify-content: space-around ;
 align-items:center;
-height: 400px;
+margin-top:1rem;
+/* border:black solid 1px; */
 }
 img{
     display:block;
@@ -110,28 +131,28 @@ transition:transform 0.4s;
     transform: scale(1.10) ;
 }
 .box{
-
+/* border:blue solid 5px; */
     width:400px;
-    height:350px;
+    height:275px;
    display:flex;
     flex-direction:column;
     align-items:center;
     justify-content: space-between;
 }
 
-.box >img{
+/* .box >img{
     max-width:350px;
     max-height:300px;
     
-}
+} */
 
 .answer{
     width:100%;  
     display:flex; 
 }
 img{
-    max-width:350px;
-    max-height:300px
+    max-width:250px;
+    max-height:200px
 }
 .boxAnswer{
     width:50%;
@@ -150,7 +171,8 @@ img{
  background-color: aliceblue;
  font-family:'Silkscreen';
     text-align:center;
-    font-size:30px;
+    font-size:20px;
+    margin-top:0.5rem;
 }
 
 .centeredBtn{
@@ -172,6 +194,7 @@ img{
     height:40px;
     text-align:center;
     font-family:'Silkscreen';
+
 }
 
      /* League Gothic', sans-serif; */
@@ -250,3 +273,60 @@ img{
             justify-content: space-around;
          }
 
+         @media all and (max-width: 768px) and (orientation: portrait){
+
+body{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    align-items:center;
+}
+    .bigContainer{
+    display:flex;
+    flex-direction:row-reverse;
+    align-items:center;
+    
+}
+.bigContainer-text{
+ 
+    display:flex;
+    flex-direction: column;
+    justify-content:space-around;
+    align-items:center;
+}
+ .container{
+    /* width:50%; */
+    flex-direction:column;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.resulted{
+    width:100%;
+    margin-top:1rem;
+}
+.resultMatch{
+    width:100%;
+    height:auto;
+}
+.box{
+    width:auto;
+    height:auto;
+}
+.boxbis{
+    display:none;
+}
+#buttonDrago,#buttonCreed,#buttonBalboa{
+    font-size:16px;
+    padding:3px;
+    
+}
+.answerGamer,.answerComputer{
+   
+    flex-direction:column-reverse;
+   margin-left:0.5rem;
+   margin-right:0.5rem;
+ 
+}
+     }
