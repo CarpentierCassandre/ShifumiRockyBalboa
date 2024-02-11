@@ -34,7 +34,7 @@ body{
   font-family:'Silkscreen';
     background-color:aliceblue;
     font-size:16px;
-    border:black solid 1px;
+    /* border:black solid 1px; */
     /* height:19vh; */
     
     
@@ -283,7 +283,7 @@ transition:transform 0.4s;
     cursor:pointer;
 }
 .answerGamer,.answerComputer{
-    border:red solid 1px;
+    /* border:red solid 1px; */
     width:280px;
     /* max-height:400px; */
     display:flex;
@@ -317,7 +317,7 @@ body{
     flex-direction: column;
     justify-content:space-around;
     align-items:center;
-    border:green solid 1px;
+    /* border:green solid 1px; */
  
   
 }
@@ -328,7 +328,7 @@ body{
     flex-direction:column;
     justify-content: space-around;
     align-items:center;
-    border:blue solid 1px;
+    /* border:blue solid 1px; */
 }
 
 .box{
@@ -363,7 +363,7 @@ body{
         margin-top:1rem;
     }
     .boxAnswer{
-        border:yellow 5px solid;
+        /* border:yellow 5px solid; */
         height:300px;
         width:0%;
     }
