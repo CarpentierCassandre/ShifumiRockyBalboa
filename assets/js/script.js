@@ -93,7 +93,7 @@ for (let u of userChoice) {
 
         answerUser.innerHTML = '';
         let newImageBalboa2 = document.createElement('div');
-        newImageBalboa2.innerHTML = ` <img src="assets/img/${userRandom[choix - 1].img}" alt="${userRandom[choix - 1].name}"/><p>${userRandom[choix - 1].name}</p>`;
+        newImageBalboa2.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choix - 1].img}" alt="${userRandom[choix - 1].name}"/><p>${userRandom[choix - 1].name}</p>`;
         answerUser.appendChild(newImageBalboa2);
 
         if (choix == 1) {
@@ -186,7 +186,7 @@ for (let u of userChoice) {
             if ((choicebis == choix)) {
                 b.innerHTML = '';
                 let newImageMvt = document.createElement('div');
-                newImageMvt.innerHTML = ` <img src="assets/img/${userRandom[choicebis - 1].imgbis}" alt="${userRandom[choicebis - 1].name}"/>`;
+                newImageMvt.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choicebis - 1].imgbis}" alt="${userRandom[choicebis - 1].name}"/>`;
                 b.appendChild(newImageMvt);
 
             }
@@ -200,7 +200,7 @@ for (let u of userChoice) {
             if ((choicebis == choix)) {
                 b.innerHTML = '';
                 let ImageReturn = document.createElement('div');
-                ImageReturn.innerHTML = ` <img src="assets/img/${userRandom[choicebis - 1].img}" alt="${userRandom[choicebis - 1].name}"/>`;
+                ImageReturn.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choicebis - 1].img}" alt="${userRandom[choicebis - 1].name}"/>`;
                 b.appendChild(ImageReturn);
 
             }
@@ -248,7 +248,7 @@ btnClick.addEventListener('click', () => {
 
         computerAnswer.innerHTML = ''
         let newImageBalboa = document.createElement('div');
-        newImageBalboa.innerHTML = ` <img src="assets/img/${userRandom[numberRandom - 1].img}" alt="${userRandom[numberRandom - 1].name}"/><p>${userRandom[numberRandom - 1].name}</p>`;
+        newImageBalboa.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[numberRandom - 1].img}" alt="${userRandom[numberRandom - 1].name}"/><p>${userRandom[numberRandom - 1].name}</p>`;
         computerAnswer.appendChild(newImageBalboa);
 
         if (result.innerText == "You win!") {

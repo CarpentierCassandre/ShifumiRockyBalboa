@@ -63,19 +63,24 @@ span{
     font-size:25px;
 }
 .container{
-width:90%;
-margin:auto;
-display:flex;
-
-flex-direction:row;
-justify-content: space-around ;
-align-items:center;
-margin-top:1rem;
-/* border:black solid 1px; */
+    width:90%;
+    margin:auto;
+    display:flex;
+    
+    flex-direction:row;
+    justify-content: space-around ;
+    align-items:center;
+    margin-top:1rem;
+    /* border:black solid 1px; */
 }
 img{
     display:block;
 }
+.img-boxer{
+    max-width:250px;
+    max-height:200px
+}
+
 #buttonBalboa{
 background-color: transparent;
 color:green;
@@ -142,10 +147,6 @@ transition:transform 0.4s;
     width:100%;  
     display:flex; 
 }
-img{
-    max-width:250px;
-    max-height:200px
-}
 .boxAnswer{
     width:50%;
  
@@ -186,6 +187,8 @@ img{
     height:20px;
     text-align:center;
     font-family:'Silkscreen';
+    writing-mode: vertical-lr;
+
 
 }
 
@@ -279,7 +282,20 @@ img{
     border:black solid 2px;
     cursor:pointer;
 }
-
+.answerGamer,.answerComputer{
+    border:red solid 1px;
+    width:280px;
+    /* max-height:400px; */
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+/* .answerGamer,.answerComputer{
+    max-height:300px;
+    max-width:400px;
+} */
 @media all and (max-width: 768px) and (orientation: portrait),
        all and (min-width: 480px) and (max-width: 1024px) and (orientation: landscape) {
 
@@ -327,15 +343,7 @@ body{
     padding:3px;
     
 }
- 
-.answerGamer,.answerComputer{
-    display:flex;
-    flex-direction:column-reverse;
-    justify-content:space-between;
-    align-items:center;
-    margin-left:0.5rem;
-    margin-right:0.5rem
-}
+
  }
 
  @media all and (max-width: 768px) and (orientation: portrait){
@@ -353,6 +361,22 @@ body{
     .resulted{
         width:100%;
         margin-top:1rem;
+    }
+    .boxAnswer{
+        border:yellow 5px solid;
+        height:300px;
+        width:0%;
+    }
+    .answerGamer,.answerComputer{
+        display:flex;
+        height:400px;
+        justify-content:space-evenly;
+        flex-direction:column-reverse;
+        align-items:center;
+        width:20%;  
+    }
+    .bgWhite{
+        writing-mode: horizontal-tb;
     }
  }
  @media (min-width: 480px) and (max-width: 1024px) and (orientation:landscape) {
@@ -390,21 +414,9 @@ body{
 
 }
 
-.answerGamer{
-    border:red solid 1px;
-    max-width:100px;
-    max-height:200px;
-    justify-content:space-around;
-    align-items: center;
-}
 .bgWhite{
     height:auto;
 }
-/* img{
-    border:blue solid 4px;
-    max-width:80px;
-    max-height:200px
-} */
 
 
  @media (min-width: 768px) and (max-width: 1200px) {
