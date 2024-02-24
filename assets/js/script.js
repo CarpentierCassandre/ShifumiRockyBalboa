@@ -93,7 +93,7 @@ for (let u of userChoice) {
 
         answerUser.innerHTML = '';
         let newImageBalboa2 = document.createElement('div');
-        newImageBalboa2.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choix - 1].img}" alt="${userRandom[choix - 1].name}"/><p>${userRandom[choix - 1].name}</p>`;
+        newImageBalboa2.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choix - 1].img}" alt="${userRandom[choix - 1].name}"/>`;
         answerUser.appendChild(newImageBalboa2);
 
         if (choix == 1) {
@@ -248,7 +248,7 @@ btnClick.addEventListener('click', () => {
 
         computerAnswer.innerHTML = ''
         let newImageBalboa = document.createElement('div');
-        newImageBalboa.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[numberRandom - 1].img}" alt="${userRandom[numberRandom - 1].name}"/><p>${userRandom[numberRandom - 1].name}</p>`;
+        newImageBalboa.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[numberRandom - 1].img}" alt="${userRandom[numberRandom - 1].name}"/>`;
         computerAnswer.appendChild(newImageBalboa);
 
         if (result.innerText == "You win!") {
