@@ -362,7 +362,7 @@ body{
 }
  }
 
- @media (min-width: 480px) and (max-width: 1024px) and (orientation:landscape) {
+ @media all and (min-width: 480px) and (max-width: 1024px) and (orientation:landscape) {
    
    body{
     flex-direction:column;
@@ -413,7 +413,30 @@ body{
 }
 
 
- @media (min-width: 768px) and (max-width: 1200px) {
- 
+@media all and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
 
+    .resultMatch{
+        width:40%;
+        
+    }
+
+    .bigContainer-text{
+       
+        height:20vh;
+
+    }
+    .container{
+    
+        height:40vh;
+    }
+
+    .containerGame{
+  
+        height:30vh;
+        
+    }
+    .sentence{
+        letter-spacing: -0.2rem;
+          font-size:10vh;    
+    }
 }
