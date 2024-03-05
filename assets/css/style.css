@@ -366,7 +366,23 @@ body{
     padding:3px;
     
 }
-
+#btnClick{
+    
+    width: 80%;
+    }
+#btnClick div{
+    display:none;
+ }
+ #btnClick p{
+ transform: translateX(0px);
+ }
+ #btnClick:active p{
+     color:red;
+ 
+     transform:translate(0px);
+     visibility: visible;
+   
+ }
  }
 
  @media all and (max-width: 768px) and (orientation: portrait){
@@ -414,16 +430,7 @@ body{
    top:80%;
 
 }
-#btnClick p{
-    transform: translateX(-30px);
-}
-#btnClick{
-    
-    width: 80%;
-    }
-    #btnClick div{
-        width:20%;
-    }
+
  }
 
  @media all and (min-width: 480px) and (max-width: 1024px) and (orientation:landscape) {
@@ -470,14 +477,12 @@ body{
     .sentence{
         letter-spacing: -0.2rem; 
     }
-
+  
 #btnClick{
 justify-content: flex-end;
-width: 80%;
+
 }
-#btnClick div{
-    width:8%;
-}
+
 /* .centeredBtn{
     justify-content:flex-end;
 } */
