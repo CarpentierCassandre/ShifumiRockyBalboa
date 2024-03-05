@@ -160,8 +160,61 @@ transition:transform 0.4s;
 .centeredBtn{
     display:flex;
     justify-content:center;
-    margin-top:20px;
-    margin-bottom:20px;
+   
+}
+#btnClick{
+ 
+    background-color: transparent;
+    color:white;
+    border:transparent;
+display:flex;
+flex-direction:row;
+justify-content:center;
+align-items:center;
+width:50%;
+cursor:pointer;
+
+
+
+}
+#btnClick div{
+    width:15%;
+    
+    visibility: hidden;
+    transition: transform 100ms;
+}
+#btnClick div>img{
+    width:100%;
+    
+}
+
+#btnClick:active div{
+    visibility: visible;
+    transform:translate(100px);
+    
+}
+/* #btnClick:hover p{
+    transform: skew(20px) ;
+} */
+#btnClick p{
+    border:white solid 2px;
+    transition:transform 200ms , visibility 300ms 200ms;
+    visibility:visible;
+    font-family:'Silkscreen';
+    font-size:20px;
+    border-radius:5px;
+    backdrop-filter: blur(10px);
+    padding:5px;
+    margin-top:10px;
+    transform: translateX(-50px);
+}
+#btnClick:active p{
+    color:red;
+    /* font-size:30px; */
+    transform:translate(100px);
+    visibility: hidden;
+    border:none;
+    backdrop-filter: none;
 }
 
 .imgFighters>img{
@@ -172,7 +225,7 @@ transition:transform 0.4s;
 
 .bgWhite{
     background-color: aliceblue;
-    height:20px;
+  
     text-align:center;
     font-family:'Silkscreen';
     writing-mode: vertical-lr;
@@ -350,6 +403,7 @@ body{
     }
     .bgWhite{
         writing-mode: horizontal-tb;
+     
     }
     
   .sentence{
@@ -360,6 +414,16 @@ body{
    top:80%;
 
 }
+#btnClick p{
+    transform: translateX(-30px);
+}
+#btnClick{
+    
+    width: 80%;
+    }
+    #btnClick div{
+        width:20%;
+    }
  }
 
  @media all and (min-width: 480px) and (max-width: 1024px) and (orientation:landscape) {
@@ -406,13 +470,18 @@ body{
     .sentence{
         letter-spacing: -0.2rem; 
     }
+
+#btnClick{
+justify-content: flex-end;
+width: 80%;
 }
-
-.bgWhite{
-    height:auto;
+#btnClick div{
+    width:8%;
 }
-
-
+/* .centeredBtn{
+    justify-content:flex-end;
+} */
+ }
 @media all and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
 
     .resultMatch{
