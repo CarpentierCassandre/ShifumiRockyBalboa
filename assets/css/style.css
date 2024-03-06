@@ -160,27 +160,30 @@ transition:transform 0.4s;
 .centeredBtn{
     display:flex;
     justify-content:center;
+    text-align:center;
+
    
 }
 #btnClick{
- 
+    margin-top:1rem;
     background-color: transparent;
     color:white;
     border:transparent;
-display:flex;
-flex-direction:row;
-justify-content:center;
-align-items:center;
-width:50%;
-cursor:pointer;
+    display:flex;
+    flex-direction:row;
+    justify-content:center;
+    align-items:center;
+    width:50%;
+    cursor:pointer;
+   
 
 
 
 }
 #btnClick div{
-    width:15%;
-    
-    visibility: hidden;
+    width:10%;
+    visibility:hidden;
+ 
     transition: transform 100ms;
 }
 #btnClick div>img{
@@ -199,7 +202,7 @@ cursor:pointer;
 #btnClick p{
     border:white solid 2px;
     transition:transform 200ms , visibility 300ms 200ms;
-    visibility:visible;
+    /* visibility:visible; */
     font-family:'Silkscreen';
     font-size:20px;
     border-radius:5px;
@@ -216,7 +219,13 @@ cursor:pointer;
     border:none;
     backdrop-filter: none;
 }
-
+#btnClick-text{
+    visibility:visible;
+    font-size:20px;
+    font-family:'Silkscreen';
+    backdrop-filter: blur(10px);
+    color:white;
+}
 .imgFighters>img{
     max-width:350px;
     max-height:300px;

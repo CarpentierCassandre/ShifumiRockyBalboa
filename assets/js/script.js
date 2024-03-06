@@ -34,7 +34,7 @@ let numberOfUserVictory = 0;
 let numberOfComputerVictory = 0;
 
 let boxbis = document.querySelectorAll('.boxbis');
-
+let centeredBtn=document.querySelector('.centeredBtn');
 //  refaire une partie 
 let buttontoDoAgain = document.querySelector('.toDoAgain');
 let buttonDontDoAgain = document.querySelector('.dontDoAgain');
@@ -46,7 +46,7 @@ let modal = document.querySelector("#myModal");
 let modalImage = document.querySelector(".modal-image");
 let modalbis = document.querySelector('.modal');
 let sentence = document.querySelector('.sentence');
-
+let btnClickText=document.querySelector("#btnClick-text");
 let numberRandomSound = Math.ceil(Math.random() * 4);
 
 let userRandom = [{
@@ -83,14 +83,17 @@ function jouerSon() {
 }
 
 //  choix de l'utilisateur
-var choix = 1;
-var choicebis = 1;
+var choix = 0;
+var choicebis = 0;
+
+// btnClickText.style.display="block";
+
 for (let u of userChoice) {
-
+// let u = false;
     u.addEventListener('click', () => {
-
+        // btnClickText.style.display="none";
+        // btnClick.style.visibility="visible";
         choix = u.getAttribute('choice');
-
         answerUser.innerHTML = '';
         let newImageBalboa2 = document.createElement('div');
         newImageBalboa2.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[choix - 1].img}" alt="${userRandom[choix - 1].name}"/>`;
@@ -211,7 +214,7 @@ for (let u of userChoice) {
 }
 
 btnClick.addEventListener('click', () => {
-    var numberRandom = Math.ceil(Math.random() * 3);
+    
     for (us of userRandom[2].sound) {
         us.pause();
     }
@@ -223,11 +226,13 @@ btnClick.addEventListener('click', () => {
     }
     jouerSon();
 
+   if ((choix==1)||(choix==2)||(choix==3)){
+    
     if (numberOfRound < 12) {
-
         numberOfRound++;
         round.innerText = numberOfRound;
-
+        
+        var numberRandom = Math.ceil(Math.random() * 3);
         if ((choix == 1) && (numberRandom == 2)) {
             result.innerText = "KO";
         } else if ((choix == 1) && (numberRandom == 3)) {
@@ -243,14 +248,13 @@ btnClick.addEventListener('click', () => {
         } else if (choix == numberRandom) {
             result.innerText = "Double KO";
         };
-
-
-
+        
+        
         computerAnswer.innerHTML = ''
         let newImageBalboa = document.createElement('div');
         newImageBalboa.innerHTML = ` <img class="img-boxer" src="assets/img/${userRandom[numberRandom - 1].img}" alt="${userRandom[numberRandom - 1].name}"/>`;
         computerAnswer.appendChild(newImageBalboa);
-
+        
         if (result.innerText == "You win!") {
             numberOfUserVictory++;
             victoryUser.innerText = numberOfUserVictory
@@ -259,24 +263,25 @@ btnClick.addEventListener('click', () => {
             numberOfComputerVictory++;
             victoryComputer.innerText = numberOfComputerVictory;
         }
-
+        
         if (choix == numberRandom) {
             numberOfComputerVictory++;
             victoryComputer.innerText = numberOfComputerVictory;
             numberOfUserVictory++;
             victoryUser.innerText = numberOfUserVictory;
         }
-
+        
         //    else if (numberOfRound==12){
-        //         console.log("blav")
-        //       delete  userRandom[0].sound;
-        //       delete userRandom[1].sound;
-        //       delete userRandom[2].sound;
-        //       } 
-
-    }
-
-
+            //         console.log("blav")
+            //       delete  userRandom[0].sound;
+            //       delete userRandom[1].sound;
+            //       delete userRandom[2].sound;
+            //       } 
+            
+        
+        
+    } 
+}    
     if ((numberOfUserVictory > numberOfComputerVictory) && (numberOfRound == 12)) {
 
         jouerSonVictory();
